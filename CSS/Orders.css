@@ -1,0 +1,80 @@
+/* General Design */
+
+
+form{
+
+text-align:right;
+
+}
+select , option, h1{
+direction:rtl;
+}
+
+
+p[id*="no"]{
+    border: 1.5px hidden;
+	background-repeat: no-repeat;
+    background-position: 10px center;
+    margin: 7px 0px;
+	padding: 15px 10px 15px 50px hidden hidden hidden hidden ;
+	font-size: 13px;
+    font-weight: bolder;
+    color: red;
+	background-color: #FFBABA;
+	background-image: url("../Pictures/error.png");
+    background-size:18px 18px ;
+}
+
+/* Input Design */ 
+
+label,form a{
+    font-weight:bold;
+    font-size: 20px;
+
+}
+select{
+    width:100%;
+    text-align:right;
+   
+}
+
+#date,#time,#first_name,#last_name,#street,#street_num,#city,#email,#phone,#comment,#card-holder-name,#card-holder-id,#card-number,#card-validation,#cvv
+{
+    border-color:rgb(98, 0, 255);
+    border-radius: 10%;
+    border-width: 1.5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 17.5px;
+}
+#service{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+    font-size: 20px;
+    border-radius: 20%;
+    border-width: 3px;
+    border-color:rgb(98, 0, 255);
+}
+
+
+
+.open{
+    text-align: center;
+    font-size: 23px;
+    margin: auto;
+ 
+}
+
+
+#guide {
+    direction: rtl;
+    font-size: 25px;
+}
+
+#style {
+    width:70%;
+    margin:auto;
+}
+
+#final{
+    text-align: center;
+}

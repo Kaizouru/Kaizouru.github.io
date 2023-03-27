@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="he">
+<title>
+    המדריכים שלנו
+</title>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <!--CSS-->
+    <link rel=stylesheet type="text/css" href="../CSS/Guides.css">
+    <link rel=stylesheet type="text/css" href="../CSS/Homepage.css">
+
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alef:wght@700&display=swap" rel="stylesheet">
+
+    <!--Jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+    <header class="container-fluid center" id="banner"></header>
+
+    <div class="heding container">
+        <hr class="rounded">
+        <h1><a>המדריכים שלנו</a></h1>
+        <hr class="rounded">
+        <div class="sub">
+            <p><i>בעמוד זה ניתן לצפות במידע על המדריכים שלנו</i></p>
+            <p><i>ולקבל תיאור מלא על אופי הסיור והשירות שאותו הם מעניקים </i></p>
+        </div>
+    </div>
+</br></br>
+
+    <div class="container-fluid">
+      <div class="flip-box">
+            <img src="../Pictures/idan.jpeg" id="guide_img">
+            <div class="overlay text-center">
+                <br>
+                <h1 class="guide">עידן גדסין</h1><br/>
+                <button type="button" onclick="showIdan()" id="gButton" class="btn btn-primary">הצג את עידן</button>
+                <p id="idantext">
+                    עידן בחור צבר טהור , נולד קרוב לירושלים.
+                   חי ונושם את ההסטוריה הארץ הישראלית עוד מהימים הקדומים.
+                   אם אתם מחפשים מקומות פסטורלים , חובבי עתיקות ורוצים להכיר את העיר על כל צדדיה בהיבט הפסטורלי.
+                   עידן מציע לכם סיור מקיף בכל המקומות הלא מוכרים בעיר ויעניק לכם חוויה בלתי נשכחת ועוצמתית שתחבר אתכם עמוק יותר אל שורשי העיר.
+                   עידן מבטיח חוויית שירות בלתי נשכחת אשר תגרום לכם להפיץ את הטיול לכל הקרובים אליכם , אין לכם מה להתלבט , הזמינו עכשיו.
+                  </p>
+
+            </div>
+
+        </div>
+        <div class="flip-box">
+            <img src="../Pictures/aviv.jpeg" id="guide_img">
+            <div class="overlay text-center">
+                <br>
+                <h1 class="guide">אביב תובל</h1><br/>
+                <button type="button" onclick="showAviv()" id="tButton" class="btn btn-primary">הצג את אביב</button>
+                <p id="avivtext">
+                    מחפשים מדריך שיעצים את חווית הביקור שלכם בירושלים?
+                    אביב הוא המדריך בשבילכם! אביב חי שנים רבות בירושלים,
+                     מכיר את כל המקומות הנסתרים והסודיים שלא כולם מכירים כך שתוכלו להינות מחוויה אותנתית מודרנית ומיוחדת בעיר!
+                    אם כל זה נשמע כמו משהו שיכול להתאים לכם, אביב הוא המדריך הנכון עבורכם!
+                </p>
+            </div>
+        </div>
+
+        <div class="flip-box">
+            <img src="../Pictures/shai.jpeg" id="guide_img">
+            <div class="overlay text-center">
+                <br>
+                <h1 class="guide">שי זיידנברג</h1><br/>
+                <button type="button" onclick="showShai()" id="oButton" class="btn btn-primary">הצג את שי</button>
+                <p id="shaitext">
+                    אוהבים ספורט? 
+                    רוצים להפוך את הסיור שלכם לחוויה בלתי נשכחת? 
+                    עם שי תוכלו להגיע לכל נק' ציון מעניינת שיש בעיר ירושלים. 
+                    ניתן לעשות את הסיור באמצעות אופניים, סגווי !
+                    ניתן להגיע לכל מקום בעיר באופן מהיר, נגיש ונוח.
+                    מדבר אליכם? רוצים לחוות את ירושלים באופן שונה? 
+                    שי הוא הכתובת שלכם! אל תהססו להזמין
+                </p>
+            </div>
+        </div>
+
+
+    </div>
+
+    <br><br>
+
+
+    <div class="container-fluid">
+
+        <footer id="footer">
+        </footer>
+    </div>
+
+    <!--JS -->
+    <script type="text/jscript" src="../JS/HeaderFooter.js"></script>
+    <script type="text/jscript" src="../JS/Guides.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE HTML>
+<html>
+<title>הזמנת סיור</title>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <header id="header"></header>
+    
+    <!--Bootstrap -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <!--Css -->
+    <link rel=stylesheet type="text/css" href="../CSS/Homepage.css">
+    <link rel=stylesheet type="text/css" href="../CSS/Orders.css">
+    
+    <!--Jquery -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    
+    
+    <!--JS-->
+    <script type="text/jscript" src="../JS/HeaderFooter.js"></script>
+    <script src="../JS/Order.js" charset="UTF-8"></script>
+
+<script>
+   window.onload=function date_function(){ 
+       var today = new Date();
+       var dd = today.getDate();
+       var mm = today.getMonth()+1; //January is 0!
+       var yyyy = today.getFullYear();
+    if(dd<10){
+        dd='0'+dd
+    } 
+    if(mm<10){
+        mm='0'+mm
+    } 
+
+       today = yyyy+'-'+mm+'-'+dd;
+       document.getElementById("date").setAttribute("min", today);
+   }
+           function check_date(){
+        var GivenDate = document.getElementById("date").value;
+        var CurrentDate = new Date();
+        GivenDate = new Date();
+
+        if((GivenDate < CurrentDate) || (GivenDate=="")){
+            $("#date").css("border", "1.5px solid red");
+            $("#no-date").html("נבחר תאריך לא תקין").show();
+            e.preventDefault();
+        }
+        
+        else {
+            $("#no-date").hide();
+            document.getElementById("date").style.border = "";
+        }
+}
+           function check_time(){
+        var GivenTime = document.getElementById("time").value;
+        
+
+        if((GivenTime < "10:00")||(GivenTime > "20:00")){
+            $("#time").css("border", "1.5px solid red");
+            $("#no-time").html("נבחרה שעה לא תקינה <br>שעות העבודה הינן בין 10:00 ל20:00").show();
+            e.preventDefault();
+        }
+        
+        else {
+            $("#no-time").hide();
+            document.getElementById("time").style.border = "";
+        }
+       
+}
+</script>
+
+</head>
+
+<body>
+    <header class="container-fluid center" id="banner">
+    </header>
+    <br><br>
+    <div class="container center">
+        <div class="heding">
+            <h1> קביעת טיול מועדף:</h1>
+                </div>
+        <br>
+        <p id="guide">
+           לאחר שבדקתם קצת על המדריכים שלנו ועל כל סוגי השירות שלנו <br/>
+            כאן תוכלו למלא את הפרטים שלכם ולבחור את הסיור המועדף עליכם
+        </p>
+    </div>
+      <br><br>
+    <main class="container-fluid" >
+        <section class="form" id="style">
+            <form method="POST" name="orderForm" action="../Include/Orders.php" dir="rtl" >
+                <div class="row mb-4">
+                    <div class="col">
+                        <div class="form">
+                             <label class="form-label" for="first_name">שם פרטי</label>
+                            <input type="text" id="first_name" name="first_name" class="form-control" placeholder="שם פרטי" />
+                            <p id="no-first"></p>
+
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form">
+                               <label class="form-label" for="last_name">שם משפחה</label>
+                            <input type="text" id="last_name" class="form-control" name="last_name" placeholder="שם משפחה" />
+                            <p id="no-last"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+                    <h4>כתובת מגורים:</h4>
+                    <p>
+                    <div class="col">
+                        <div class="form">
+                            <label class="form-label" for="city">עיר</label>
+                            <input type="text" id="city" name="city" class="form-control" />
+                            <p id="no-city"></p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form">
+                            <label class="form-label" for="street">רחוב</label>
+                            <input type="text" id="street" name="street" class="form-control" />
+                            <p id="no-street"></p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form">
+                            <label class="form-label" for="street_num">מספר</label>
+                            <input type="number" id="street_num" name="street_num" class="form-control" min="1" maxlength="4" />
+                            <p id="no-street-num"></p>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row mb-4">
+                    <div class="col">
+                        <div class="form">
+                            <label class="form-label" for="email">אימייל</label>
+                            <input type="text" id="email" name="email" class="form-control" placeholder="User@Example.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"/>
+                            <p id="no-email"></p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form">
+                            <label class="form-label" for="phone">טלפון</label>
+                            <input type="tel" id="phone" name="phone" class="form-control" maxlength="10" minlength="10" placeholder="05XXXXXXXX" pattern="[0]{1}[5]{1}[0-9]{8}" />
+                            <p id="no-phone"></p>
+                        </div>
+                    </div>
+                </div>
+
+                    <legend>התאם את הטיול באופן המועדף עליך:</legend>
+                    <p></p>
+                    <div class="row mb-4">
+                        <div class="col">
+                            <div class="form ">
+                             <label class="form-label" for="time">בחר שעה</label>
+                                <input onblur="check_time()" type="time" id="time" name="time" class="form-control"  min="08:30" max="21:00">
+                                <p id="no-time"></p>
+    
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form" dir="rtl">
+                                <label class="form-label" for="date">בחר תאריך</label>
+                                <input onblur="check_date()" type="date" id="date" name="date" class="form-control" max="2023-12-31" >
+                                <p id="no-date"></p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form">
+                                <br><br>
+                                <select name="tour" class="custom-select" id="service">
+                                    <option value="0">בחר סיור</option>
+                                    <option value="200">סיור אטרקציות - ₪200</option>
+                                    <option value="350">סיור ספורטיבי - ₪350</option>
+                                    <option value="120">סיור היסטורי - ₪120</option>
+                                </select>
+                                <label class="form-label" for="service"></label>
+                                <p id="no-service"></p>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <section>
+                        <legend>בחר את המדריך</legend>
+                        <div class="row mb-4">
+                            <div class="col">
+                                <div class="form">
+                                    <img src="../Pictures/idanradio5.png"/> 
+                                    <label class="form-label" for="idan">עידן גדסין </label>
+                                    <input type="radio" name="guide" id="master" value = "idan" >
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form">
+                                    <img src="../Pictures/avivradio2.png"/>
+                                    <label class="form-label" for="aviv">אביב תובל</label>
+                                    <input type="radio" name="guide" id="master" value = "aviv">
+                                </div>
+                            </div>
+    
+                            <div class="col">
+                                <div class="form">
+                                    <img src="../Pictures/shairadio2.png"/>
+                                    <label class="form-label" for="shai">שי זיידנברג</label>
+                                    <input type="radio" name="guide" id="master" value = "shai" >
+                                </div>
+                            </div>
+                            <p id="no-master"></p>
+                        </div>
+                    </section>
+
+                <div class="form mb-4">
+                     <label class="form-label" for="comment"> הערות \ טענות להזמנה:</label>
+                    <textarea class="form-control" id="comment" name="comment" rows="3"></textarea>
+                </div>
+                <section id="credit-info">
+                    <legend>הזנת פרטי תשלום</legend>
+                    <div class="row mb-4">
+                        <div class="col">
+                            <div class="form ">
+                                <label class="form-label" for="card-holder-name">שם בעל הכרטיס</label>
+                                <input type="text" id="card-holder-name" name="card-holder-name" class="form-control" placeholder="שם בעל הכרטיס"  />
+                                <p id="no-cardholder-name"></p>
+
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form">
+                                <label class="form-label" for="card-holder-id">ת"ז בעל כרטיס</label>
+                                <input type="number" id="card-holder-id" name="card-holder-id"  maxlength="9" class="form-control" placeholder="123456789" />
+                                <p id="no-cardholder-id"></p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col">
+                            <div class="form">
+                                <label class="form-label" for="card-number">מספר כרטיס אשראי</label><br>
+                                <input type="number" id="card-number" name="card-number" class="form-control" maxlength="16" placeholder="1111222233334444" />
+                                <p id="no-card-number"></p>
+
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form">
+                                <label class="form-label" for="card-validation">תוקף</label>
+                                <input type="text" id="card-validation" name="card-validation" class="form-control" placeholder="MM/YY" maxlenght=5 pattern="[0-1]{1}[0-9]{1}[/]{1}[2-3]{1}[3-9]{1}">
+                                <p id="no-card-validity"></p>
+
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form">
+                                <label class="form-label" for="cvv"> CVV</label>
+                                <input type="tel" id="cvv" name="cvv"  maxlength="3" class="form-control" placeholder="123">
+                                <p id="no-cvv"></p>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                 <button type="submit" class="btn btn-primary btn-block mb-4 center" id="final">לחץ לביצוע הזמנה</button>
+            </form>
+                 
+        </section>
+  
+    </main>
+    <br><br>
+
+    <div class="container-fluid">
+        <footer id="footer">  </footer>
+    </div>
+    
+    
+  
+</body>
+
+</html>

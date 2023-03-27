@@ -1,0 +1,296 @@
+/* Ganeral css */
+
+html, body {
+    background-image: url("../Pictures/backgroundimp.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+#bold{
+    font-weight:bold;
+}
+
+
+/* Header css */
+
+#banner {
+    margin: auto;
+    background:  url("../Pictures/Kotel.jpg");
+    background-color: rgba(255, 255, 255, 0.6);
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+#banner h1 {
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    padding: 40px 20px 20px 20px;
+    margin: 60px 10px 20px 10px;
+    font-size:90px;
+}
+
+#banner img {
+    position: relative;
+    display: inline-block;
+    opacity: 0.8;
+    color: white;
+    padding: 5px 20px;
+    width: 10%;
+    height: 78%;
+    top: -20px;
+    margin-top: 0%;
+    margin-left: 0%;
+    max-height: 20%;
+    max-width: 50%;
+    bottom: 10px;
+}
+
+
+#banner p {
+    padding: 58px;
+    font-size: 45px;
+    margin-right: 13%;
+    margin-left: 13%;
+}
+
+.subtitle {
+    opacity: 0.6;
+    background-color: lightsteelblue;
+    color: black;
+}
+
+
+/* Menu css */
+
+.navmenu a:hover {
+    background-color: lightslategray;
+
+}
+
+.navmenu {
+    text-align: right;
+    padding-top: 10px;
+    opacity: 0.9;
+    margin-left: -12px;
+    margin-right: -12px;
+}
+
+.navmenu li, .navmenu a {
+    background-color: #fdec2fa2;
+    display:  flex;
+    margin-right: 20px;
+    margin-left: 20px;
+    font-size: 25px;
+    text-decoration-line: none;
+    font-weight: bolder;
+    color: black;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.li-style {
+    opacity: 0.9;
+}
+
+/* Main Section - TLV Map + About */
+
+
+.parallax-body {
+    background-color: rgba(255, 255, 255, 0.6);
+    background-blend-mode: lighten;
+    height: 1100px;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax-body iframe {
+    width: 100%;
+    height: 100%;
+    margin-left: 2%;
+}
+
+.content-text {
+    float: left;
+    opacity: 0.9;
+    position: relative;
+    width: 50%;
+    height: 1100px;
+}
+
+.note {
+    width: 40%;
+    margin-left: 10%;
+    margin-top: 5%;
+    float: left;
+    display: inline;
+    position: relative;
+    text-align: center;
+    font-weight: bold;
+    background-size: cover;
+    background-repeat: no-repeat;
+    direction: rtl;
+    text-overflow: ellipsis;
+    color: black;
+}
+
+.note h2 {
+    text-decoration: underline;
+    font-size: 70px;
+    padding-top: 15px;
+    font-family: 'Secular One', sans-serif;
+}
+
+#notep {
+    font-family: 'Assistant', sans-serif;
+    font-size: 36px;
+    margin: 2% 4% 7% 5%;
+}
+
+#faceEnter {
+    color: rgba(43, 73, 247, 0.877);
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 2% 4% 7% 5%;
+}
+
+#faceEnter a{
+    text-decoration: none;
+}
+
+/* Footer CSS */
+#footer {
+    clear: both;
+    background-image: linear-gradient(to right, rgba(255,255,255, 0.5) 0 100%), 
+  url("../Pictures/Jerusalemfooter");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-size: 30px;
+    overflow: hidden;
+    opacity: 0.9;
+    margin-left: -10px;
+    margin-right: -5px;
+    direction: ltr;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+
+.contact-design {
+    list-style: none;
+    display: inline-flex;
+    margin-left: -10px;
+}
+
+.contact-design img{
+    height: 70%;
+    width: 40;
+}
+
+.contact-design>b {
+    margin: 0px 0px 0px 0px;
+}
+
+
+#footerDesign {
+    font-size: 55px;
+    font-family: 'Indie Flower', cursive;
+    text-decoration: underline;
+    font-weight: bold;
+    direction: ltr;
+}
+
+.footImg {
+    width: 10%;
+    height: 20%;
+    float: right;
+    margin-top: 10px;
+    margin-right: 3px;
+
+}
+
+.title {
+    margin-top: 30px;
+    font-family: 'Courier New', monospace;
+    font-size: 30px;
+}
+
+/* Responsive */
+
+@media only screen and (max-width: 1000px) {
+
+
+    .note {
+        width: 40%;
+    }
+
+    .note h2 {
+        font-size: 33px;
+    }
+
+    #notep {
+        font-size: 20px;
+    }
+
+    #faceEnter {
+       font-size: 13px;
+    }
+
+    #faceEnter img {
+        width: 10%;
+        height: 10%;
+    }
+
+    #banner h1 {
+        font-size: 43px;
+    }
+
+    #banner img {
+        width: 15%;
+    }
+
+    audio{
+        max-height: 100%;
+        max-width: 100%;
+        margin: auto;
+        object-fit: contain;
+        }
+
+    #banner p {
+        font-size: 27px;
+        margin-bottom: 5%;
+    }
+
+    .navmenu {
+        display: inline-block;
+    }
+
+    .navmenu li, .navmenu a {
+        text-align: center;
+    }
+
+    #footerDesign {
+        font-size: 30px;
+    }
+
+
+}
+
+@media only screen and (max-width: 600px) {
+
+    #banner img {
+        display: none;
+    }
+}
+
+
+.flex-container {
+    display: flex;
+}

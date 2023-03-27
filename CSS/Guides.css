@@ -1,0 +1,195 @@
+/*Guides Title*/
+.container {
+  position: relative;
+  width: 80%;
+
+}
+
+.heding {
+  text-align: center;
+  color: black;
+  font-family: 'Niconne', cursive;
+  font-weight: 10px;
+
+}
+
+.heding h1 {
+  text-align: center;
+  color: black;
+  padding: 1px;
+  font-family: 'Raleway', cursive;
+  font-weight: 80px;
+  position: relative;
+  text-shadow: 2px 2px 0px royalblue;
+}
+
+.heding h1::before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: -30px;
+    width: 200px;
+    height: 300px;
+    background: radial-gradient(10% 10%, ellipse closest-side, #444,black);  
+}
+
+.heding h1 a {
+  background: rgb(174,238,196);
+  background:linear-gradient(90deg, rgba(255, 255, 208, 0.62) 0%, rgba(143, 226, 191, 0.36) 25%, rgba(255, 255, 208, 0.62) 46%, rgba(152, 255, 169, 0.32) 50%, rgba(241, 255, 217, 0.51) 75%, rgba(255, 252, 238, 0.68) 100%);
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  letter-spacing: 5px;
+}
+
+.sub {
+  font-size: 37px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+hr.rounded {
+  border-top: 2px solid;
+  border-radius: 5px;
+  border-style: solid;
+}
+
+/*Images + Guides Description*/
+
+
+.flip-box {
+  border: 1px solid;
+  border-color: transparent;
+  perspective: 1000px;
+  display: inline-block;
+  width: 30%;
+  margin-left: 2%;
+  margin-top: 6%;
+  border-radius: 50%;
+}
+
+.flip-box:hover .overlay {
+  opacity: 0.6;
+}
+
+#guide_img {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  height: 40%;
+  width: 98%;
+  opacity: 0;
+  background: radial-gradient(circle, rgba(174,238,196,1) 0%, rgba(204,248,231,0.9672911400888481) 23%);
+  border-radius:50px 50px;
+  overflow: auto;
+  text-overflow: ellipsis;
+}
+
+.overlay h1 {
+  font-weight: bold;
+  text-decoration: underline;
+  text-underline-offset: 7px;
+}
+
+#idantext, #avivtext, #shaitext {
+  font-size: 23px;
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-left: 3%;
+  margin-right: 3%;
+  direction: rtl;
+  display: none;
+}
+
+
+.guide {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 40px;
+}
+
+.btn-primary {
+  margin: auto;
+}
+
+#oButton, #gButton, #tButton {
+  background-color: darkslategrey;
+  color: whitesmoke;
+  border-color: transparent;
+  font-weight: bold;
+  display: inline;
+  height: auto;
+  width: 40%;
+}
+
+
+@media screen and (max-width: 1200px) {
+
+  #galText1, #omerText1, #talText1 {
+    font-size: 10px;
+    overflow: auto;
+    text-overflow: ellipsis;
+
+  }
+
+  .guide {
+    font-size: 13px;
+  }
+
+  .heding h1 {
+    font-size: 40px;
+  }
+
+  .sub {
+    font-size: 27px;
+  }
+
+
+}
+
+@media screen and (max-width: 960px) {
+  #oButton, #gButton, #tButton {
+    width: 40%;
+    font-size: 11px;
+    display: inline;
+  }
+
+  .flip-box {
+    display: inline-flex;
+    width: 60%;
+    margin-left: 15%;
+  }
+
+  #galText1, #omerText1, #talText1 {
+    font-size:16px;
+    overflow: auto;
+    text-overflow: ellipsis;
+
+  }
+}
+
+ @media screen and (max-width: 768px) {
+  #oButton, #gButton, #tButton {
+    width: 40%;
+    font-size: 11px;
+    display: inline;
+  }
+
+  .flip-box {
+    display: inline-flex;
+    width: 60%;
+    margin-left: 15%;
+  }
+
+  #galText1, #omerText1, #talText1 {
+    font-size:12px;
+    overflow: auto;
+    text-overflow: ellipsis;
+
+  }
+
+} 
